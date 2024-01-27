@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -29,7 +28,6 @@ func (h *Handler) GetSuggestions(c *gin.Context) {
 }
 func (h *Handler) GetPaginatedMovies(c *gin.Context) {
 	page := c.Query("page")
-	fmt.Println("page: ", page)
 	movies, newPageState := h.MovieService.GetPaginatedMovies(page)
 
 	c.JSON(http.StatusOK, gin.H{"movies": movies, "page_state": newPageState})
