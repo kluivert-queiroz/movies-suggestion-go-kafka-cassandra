@@ -4,6 +4,16 @@ This project uses Go, Kafka and Cassandra to receive watched movies from a Rest 
 
 - API at localhost:8080
 - Kafka UI at localhost:8081
+
+## How to Start
+Run 
+```
+docker-compose up
+```
+Feed database with movies from IMDB
+```
+docker exec -it cqlsh -f schema/cassandra/0_init.cql
+```
 ## APIs
 
 - `GET /movies?page={pageState}` to fetch movies from database
