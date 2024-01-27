@@ -1,0 +1,7 @@
+kafka:
+  clusters:
+    - name: Kafka
+      bootstrapServers: kafka:9092
+      metrics:
+        port: 9997
+        type: JMX
