@@ -12,7 +12,7 @@ docker-compose up
 ```
 Feed database with movies from IMDB
 ```
-docker exec -it cqlsh -f schema/cassandra/0_init.cql
+docker exec -it cassandra1 cqlsh -f schema/cassandra/0_init.cql
 ```
 ## APIs
 
